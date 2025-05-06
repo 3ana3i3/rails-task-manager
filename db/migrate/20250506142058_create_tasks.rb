@@ -1,10 +1,9 @@
-class CreateTasks < ActiveRecord::Migration[8.0]
+class CreateTasks < ActiveRecord::Migration[7.1]
   def change
     create_table :tasks do |t|
       t.string :title
       t.text :details
-      t.string :completed
-      t.string :false
+      t.boolean :completed
 
       t.timestamps
     end
